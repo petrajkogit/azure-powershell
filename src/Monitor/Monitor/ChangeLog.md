@@ -19,6 +19,8 @@
 -->
 
 ## Upcoming Release
+
+## Version 2.1.0
 * Extend the parameter set in `Set-AzDiagnosticSetting` for separation of Logs and Metrics enablement [#12482]
 
 ## Version 2.0.2

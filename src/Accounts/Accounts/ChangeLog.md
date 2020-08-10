@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 1.9.3
 * Exposed SubscriptionPolicies in `Get-AzSubscription` [#12551]
 
 ## Version 1.9.2

@@ -1,3 +1,30 @@
+## 4.6.0 - August 2020
+#### Az.Accounts
+* Exposed SubscriptionPolicies in 'Get-AzSubscription' [#12551]
+
+#### Az.Compute
+* Added '-EncryptionAtHost' parameter to New-AzVm, New-AzVmss, New-AzVMConfig, New-AzVmssConfig, Update-AzVM, and Update-AzVmss
+* Added 'SecurityProfile' to Get-AzVM and Get-AzVmss return object
+* Added the '-InstanceView' switch as optional parameter to Get-AzHostGroup
+
+#### Az.DataFactory
+* Added missing properties to PSPipelineRun class.
+
+#### Az.Monitor
+* Extend the parameter set in 'Set-AzDiagnosticSetting' for separation of Logs and Metrics enablement [#12482]
+
+#### Az.Resources
+* Added 'Get-AzDeploymentManagementGroupWhatIfResult' for getting ARM template What-If results at management Group scope
+* Added 'Get-AzTenantWhatIfResult' new cmdlet for getting ARM template What-If results at tenant scope
+* Overrode '-WhatIf' and '-Confirm' for 'New-AzManagementGroupDeployment' and 'New-AzTenantDeployment' to use ARM template What-If results
+* Fixed the hehaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and 
+* Fixed serialization error for '-TemplateObject' and 'TemplateParameterObject' [#1528] [#6292]
+
+#### Az.Storage
+* Supported blob query acceleration
+    -  'Get-AzStorageBlobQueryResult'
+    -  'New-AzStorageBlobQueryConfig'
+
 ## 4.5.0 - August 2020
 #### Az.Accounts
 * Updated 'Connect-AzAccount' to accept parameter 'MaxContextPopulation' [#9865]
