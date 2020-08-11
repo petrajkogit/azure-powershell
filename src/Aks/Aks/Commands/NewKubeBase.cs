@@ -103,7 +103,6 @@ namespace Microsoft.Azure.Commands.Aks
         protected override ManagedCluster BuildNewCluster()
         {
             BeforeBuildNewCluster();
-
             var pubKey =
                 new List<ContainerServiceSshPublicKey> { new ContainerServiceSshPublicKey(SshKeyValue) };
 

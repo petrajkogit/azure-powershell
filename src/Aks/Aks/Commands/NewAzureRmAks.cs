@@ -67,11 +67,12 @@ namespace Microsoft.Azure.Commands.Aks
             }
         }
 
-        private void PreValidate()
+        protected override void PreValidate()
         {
             if ((this.IsParameterBound(c => c.NodeMinCount) || this.IsParameterBound(c => c.NodeMaxCount) || this.EnableNodeAutoScaling.IsPresent) &&
                 !(this.IsParameterBound(c => c.NodeMinCount) && this.IsParameterBound(c => c.NodeMaxCount) && this.EnableNodeAutoScaling.IsPresent))
                 throw new PSInvalidCastException(Resources.AksNodePoolAutoScalingParametersMustAppearTogether);
+            base.PreValidate();
         }
     }
 }
